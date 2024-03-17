@@ -5,14 +5,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
   <style>
-    body {
+    html, body {
+      height: 100%;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
     }
-
+    
     canvas {
       display: block;
     }
@@ -21,23 +21,12 @@
 <body>
   <script>
     // Your JavaScript code goes here
-
-    function centerCanvas() {
-      var x = (windowWidth - width) / 2;
-      var y = (windowHeight - height) / 2;
-      cnv.position(x, y);
-    }
-
+    
     function setup() {
-      let cnv = createCanvas(500, 500);
-      centerCanvas();
+      createCanvas(500, 500);
       // ...
     }
-
-    function windowResized() {
-      centerCanvas();
-    }
-
+    
     // ...
   </script>
 </body>
