@@ -13,23 +13,29 @@
       margin: 0;
     }
 
-    #canvas-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    canvas {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div id="canvas-container"></div>
-
   <script>
     // Your JavaScript code goes here
 
+    function centerCanvas() {
+      var x = (windowWidth - width) / 2;
+      var y = (windowHeight - height) / 2;
+      cnv.position(x, y);
+    }
+
     function setup() {
-      let canvas = createCanvas(500, 500);
-      canvas.parent('canvas-container');
+      let cnv = createCanvas(500, 500);
+      centerCanvas();
       // ...
+    }
+
+    function windowResized() {
+      centerCanvas();
     }
 
     // ...
