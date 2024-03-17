@@ -13,14 +13,26 @@
       margin: 0;
     }
 
-    canvas {
-      display: block;
+    #canvas-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   </style>
 </head>
 <body>
+  <div id="canvas-container"></div>
+
   <script>
     // Your JavaScript code goes here
+
+    function setup() {
+      let canvas = createCanvas(500, 500);
+      canvas.parent('canvas-container');
+      // ...
+    }
+
+    // ...
   </script>
 </body>
 </html>
