@@ -5,28 +5,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
   <style>
-    html, body {
-      height: 100%;
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
+    }
+
+    #canvas-container {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    
-    canvas {
-      display: block;
-    }
   </style>
 </head>
 <body>
+  <div id="canvas-container"></div>
+
   <script>
     // Your JavaScript code goes here
-    
+
     function setup() {
-      createCanvas(500, 500);
+      let canvas = createCanvas(500, 500);
+      canvas.parent('canvas-container');
       // ...
     }
-    
+
     // ...
   </script>
 </body>
