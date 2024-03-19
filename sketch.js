@@ -12,7 +12,7 @@ let showInstructions = true;
 let isFrozen = false;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(600, 600);
   video = createCapture(VIDEO);
   video.size(width, height);
   video.hide();
@@ -185,4 +185,35 @@ function keyPressed() {
   } else if (key === 'f') {
     isFrozen = !isFrozen;
   }
+}
+
+function toggleDrawing() {
+  isDrawing = !isDrawing;
+}
+
+function clearCanvas() {
+  fluid = new Array(numCols * numRows).fill(0);
+  faceColors = [];
+}
+
+function saveArtwork() {
+  saveCanvas('fluid-artwork', 'png');
+}
+
+function toggleCamera() {
+  showCamera = !showCamera;
+}
+
+function randomizeColors() {
+  faceColors = [];
+  leftWristColor = getRandomColor();
+  rightWristColor = getRandomColor();
+}
+
+function toggleInstructions() {
+  showInstructions = !showInstructions;
+}
+
+function toggleFreeze() {
+  isFrozen = !isFrozen;
 }
