@@ -12,3 +12,4 @@ By tracking the appearence of user's face/wrist, this web-deployed video detecti
 https://github.com/PavelDoGreat/WebGL-Fluid-Simulation.git
 https://github.com/mharrys/fluids-2d.git
 https://gist.github.com/gillkyle/3e8e2e02b877fd6e83895bf634d07a81
+https://github.com/ishiki-lab/gopd_mocd_facedisplay
